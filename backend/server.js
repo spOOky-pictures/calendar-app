@@ -51,7 +51,7 @@ app.get("/calendar-app/api/krneki", async (req, res) => {
     const user = await db.execute(
       "SELECT name FROM scheduler.employees WHERE id = 1"
     );
-    res.status(200).json({ message: `New User ${user} selected` });
+    res.status(200).json({ message: `New user ${user} selected` });
   } catch (err) {
     console.error("Error changing the role:", err);
     res.status(500).json({ error: "Could not change the role" });
